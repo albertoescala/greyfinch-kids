@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "commitizen": "^3.0.7",
+    "emotion": "^10.0.9",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
-    "emotion": "^10.0.9"
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "concurrently --names 'react,views' --handle-input npm:dev npm:views",
@@ -15,7 +16,13 @@
     "eject": "react-scripts eject",
     "dev": "react-scripts start",
     "views": "views-morph src --watch --as react-dom",
-    "prebuild": "views-morph src --as react-dom"
+    "prebuild": "views-morph src --as react-dom",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
