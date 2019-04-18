@@ -1,0 +1,11 @@
+Button Horizontal
+  borderWidth 1
+  borderStyle solid
+  borderColor #000
+  borderTopLeftRadius 10
+  borderTopRightRadius 10
+  borderBottomLeftRadius 10
+  borderBottomRightRadius 10
+  onClick <
+  Label Text
+    text <text Lorem
