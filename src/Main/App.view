@@ -4,6 +4,16 @@ App Vertical
   flexGrow 1
   flexShrink 1
   justifyContent center
-  Text
-    fontSize 18
-    text Hello Views Tools!
+  Logo Vertical
+    position relative
+    Avatar Image
+      height 150
+      source https://static.wixstatic.com/media/f22443_670e1d37394d4d098a574b9c3369d9f1~mv2.png
+      width 300
+    AvatarKids Image
+      height 80
+      width 170
+      position absolute
+      right -90
+      bottom -26
+      source https://nuevahumanidad.org/wp-content/uploads/2017/09/KIDS_Mail-Nueva_Humanidad.png

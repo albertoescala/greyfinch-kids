@@ -6,6 +6,12 @@ Button Horizontal
   borderTopRightRadius 10
   borderBottomLeftRadius 10
   borderBottomRightRadius 10
+  paddingTop 10
+  paddingBottom 10
+  paddingLeft 10
+  paddingRight 10
+  cursor pointer
   onClick <
   Label Text
+    fontSize 18
     text <text Lorem
