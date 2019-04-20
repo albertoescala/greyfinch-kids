@@ -1,0 +1,14 @@
+Card Vertical
+  borderWidth 1
+  borderStyle solid
+  borderColor #fff
+  borderTopLeftRadius 10
+  borderTopRightRadius 10
+  borderBottomLeftRadius 10
+  borderBottomRightRadius 10
+  maxWidth 200
+  overflowX hidden
+  overflowY hidden
+  Avatar Image
+    source <avatar
+    maxWidth 400

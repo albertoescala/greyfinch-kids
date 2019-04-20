@@ -7,9 +7,7 @@ const Welcome = () => {
   return (
     <WelcomeView>
       <Link to="/choose-name">
-        <Button>
-          Start
-        </Button>
+        <Button text="Start" />
       </Link>
     </WelcomeView>
   )
