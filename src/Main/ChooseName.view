@@ -1,3 +1,7 @@
 ChooseName Vertical
+  maxWidth 400
+  marginLeft auto
+  marginRight auto
+  textAlign center
   Nickname Text
     text Choose A Nickname

@@ -11,6 +11,7 @@ Button Horizontal
   paddingLeft 10
   paddingRight 10
   cursor pointer
+  justifyContent center
   onClick <
   Label Text
     fontSize 18

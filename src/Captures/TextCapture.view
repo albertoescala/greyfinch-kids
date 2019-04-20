@@ -1,0 +1,13 @@
+Text Capture
+  type text
+  onChange <
+  value <
+  placeholder <
+  borderWidth 1
+  borderStyle solid
+  borderColor #000
+  maxWidth 400
+  marginTop 10
+  marginRight 10
+  marginBottom 10
+  marginLeft 10
