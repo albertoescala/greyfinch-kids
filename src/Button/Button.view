@@ -13,6 +13,8 @@ Button Horizontal
   cursor pointer
   justifyContent center
   onClick <
+  disabled <
+  type <
   Label Text
     fontSize 18
     text <text Lorem

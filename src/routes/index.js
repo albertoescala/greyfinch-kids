@@ -3,7 +3,7 @@ import WaitingComponent from './WaitingComponent'
 import Welcome from '../Main/Welcome.view.logic.js'
 
 const ChooseName = lazy(() => import('../Main/ChooseName.view.logic.js'))
-
+const ChooseAnimal = lazy(() => import('../Main/ChooseAnimal.view.logic.js'))
 
 export default [
   {
@@ -18,6 +18,13 @@ export default [
     component: WaitingComponent(ChooseName),
     exact: true,
     key: 'choose-name',
+    requireAuth: false
+  },
+  {
+    path: '/choose-animal',
+    component: WaitingComponent(ChooseAnimal),
+    exact: true,
+    key: 'choose-animal',
     requireAuth: false
   }
 ]
