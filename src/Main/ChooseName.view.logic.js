@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Mutation } from "react-apollo";
 import ChooseNameView from './ChooseName.view.js'
-import Card from '../Card/Card.view.js'
-import Button from '../Button/Button.view.js'
+import Card from '../components/Card/Card.view.js'
+import Button from '../components/Button/Button.view.js'
 import { searchGiphy } from '../services'
 import { pickRandomly } from '../utils/common'
 import { ANIMALS } from '../constants'

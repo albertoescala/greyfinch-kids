@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Button from '../Button/Button.view.js'
+import Button from '../components/Button/Button.view.js'
 import ChooseAnimalView from './ChooseAnimal.view.js'
-import Card from '../Card/Card.view.js'
+import Card from '../components/Card/Card.view.js'
 import { getRandomGiphyByTag } from '../services'
 import { ANIMALS } from '../constants'
 

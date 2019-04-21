@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { Link } from 'react-router-dom'
 import AnimalListView from './AnimalList.view.js'
-import Button from '../Button/Button.view.js'
-import CardList from '../List/CardList.view.js'
+import Button from '../components/Button/Button.view.js'
+import CardList from '../components/List/CardList.view.js'
 import { searchGiphy } from '../services'
 
 const limit = 20

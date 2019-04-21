@@ -3,8 +3,8 @@ import { Query } from 'react-apollo'
 import { allUsers } from '../graphql/queries'
 import { Link } from 'react-router-dom'
 import UserListView from './UserList.view.js'
-import Button from '../Button/Button.view.js'
-import TextList from '../List/TextList.view.js'
+import Button from '../components/Button/Button.view.js'
+import TextList from '../components/List/TextList.view.js'
 
 const UserList = () => {
   return (

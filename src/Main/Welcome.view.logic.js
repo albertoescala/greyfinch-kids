@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Button from '../Button/Button.view.js'
+import Button from '../components/Button/Button.view.js'
 import WelcomeView from './Welcome.view.js'
 
 const Welcome = () => {
