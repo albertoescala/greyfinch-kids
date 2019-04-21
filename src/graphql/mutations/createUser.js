@@ -11,4 +11,4 @@ const CreateUser = gql`
   }
 `
 
-export default CreateUser;
+export default CreateUser

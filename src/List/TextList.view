@@ -1,0 +1,6 @@
+UserList List
+  maxWidth 500
+  flexDirection column
+  from <
+  Label
+    key item.id

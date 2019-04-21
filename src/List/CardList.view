@@ -1,0 +1,6 @@
+CardList List
+  maxWidth 500
+  flexWrap wrap
+  from <
+  Card
+    key item.id

@@ -1,0 +1,6 @@
+Label Horizontal
+  Text
+    marginRight 10
+    text <name
+  Text
+    text <age

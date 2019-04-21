@@ -19,10 +19,10 @@ const ChooseName = (props) => {
 
   useEffect(() => {
     if (localStorage.getItem('user')) {
-      return props.history.push('/choose-game')
+      return props.history.push('/choose-animal')
     }
     async function fetchData() {
-      const data = await searchGiphy(pickRandomly(ANIMALS))
+      const { data } = await searchGiphy(pickRandomly(ANIMALS))
       if (Array.isArray(data)) {
         setAnimal(data[0].images.fixed_height.url)
       }
@@ -41,7 +41,7 @@ const ChooseName = (props) => {
               const { data } = await createUser({ variables: { name: nickname, age: age, score: 0 } })
               if (data.createUser) {
                 localStorage.setItem('user', JSON.stringify(data.createUser))
-                props.history.push('/choose-game')
+                props.history.push('/choose-animal')
               }
             }}
           >

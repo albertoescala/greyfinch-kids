@@ -9,6 +9,7 @@ Card Vertical
   maxWidth 200
   overflowX hidden
   overflowY hidden
+  onClick <
   Avatar Image
     source <avatar
     maxWidth 400

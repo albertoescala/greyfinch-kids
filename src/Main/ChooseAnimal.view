@@ -1,4 +1,5 @@
 ChooseAnimal Horizontal
   maxWidth 500
-  Label Text
-    text HHOLA
+  flexWrap wrap
+  Text
+    text Choose an animal
