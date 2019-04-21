@@ -10,7 +10,7 @@ import { createUser } from '../graphql/mutations'
 import {
   TextCapture,
   NumberCapture
-} from '../Captures'
+} from '../components/Captures'
 
 const ChooseName = (props) => {
   const [ animal, setAnimal ] = useState('https://via.placeholder.com/400x200?text=Greyfinch')
