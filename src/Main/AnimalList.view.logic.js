@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useReducer } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { Link } from 'react-router-dom'
 import AnimalListView from './AnimalList.view.js'
@@ -8,40 +8,59 @@ import { searchGiphy } from '../services'
 
 const limit = 20
 
-const AnimalList = (props) => {
-  const [ animals, setAnimals ] = useState([])
-  const [ offset, setOffset ] = useState(1)
-  const [ hasMore, setHasMore ] = useState(true)
+const initialState = {
+  config: {
+    animals: [],
+    offset: 1,
+    hasMore: true
+  }
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'setConfig':
+      return { ...state, config: action.config };
+    default:
+      throw new Error('Unexpected action');
+  }
+};
+
+const AnimalList = ({ match }) => {
+  const [ state, dispatch ] = useReducer(reducer, initialState);
 
   useEffect(() => {
     async function fetchData() {
-      const { data } = await searchGiphy(props.match.params.name, limit)
+      const { data } = await searchGiphy(match.params.name, limit)
       if (Array.isArray(data)) {
-        setAnimals(data.map(({ id, images }) => ({ id, avatar: images.fixed_height.url })))
+        dispatch({
+          type: 'setConfig',
+          config: {
+            ...state.config,
+            animals: data.map(({ id, images }) => ({ id, avatar: images.fixed_height.url }))
+          }
+        })
       }
     }
     fetchData()
   }, [])
 
   const loadMoreAnimals = async () => {
-    if (!hasMore) return null
-    setOffset(offset + limit)
-  }
+    if (!state.config.hasMore) return null
+    const { data, pagination } = await searchGiphy(match.params.name, limit, state.config.offset + limit)
+    const newAnimals = data.map(({ id, images }) => ({ id, avatar: images.fixed_height.url }))
 
-  useEffect(() => {
-    async function loadMore() {
-      const { data, pagination } = await searchGiphy(props.match.params.name, limit, offset)
-      const newAnimals = data.map(({ id, images }) => ({ id, avatar: images.fixed_height.url }))
-      setAnimals([
-        ...animals,
-        ...newAnimals
-      ])
-      if (offset >= pagination.total_count) {
-        setHasMore(false)
+    dispatch({
+      type:'setConfig',
+      config: {
+        offset: state.config.offset + limit,
+        animals: [
+          ...state.config.animals,
+          ...newAnimals
+        ],
+        hasMore: state.config.offset >= pagination.total_count ? false : true
       }
-    }
-    loadMore()
-  }, [ offset ])
+    })
+  }
 
   return (
     <AnimalListView>
@@ -49,12 +68,12 @@ const AnimalList = (props) => {
         <Button text="Back" />
       </Link>
       <InfiniteScroll
-        dataLength={animals.length}
+        dataLength={state.config.animals.length}
         next={loadMoreAnimals}
-        hasMore={hasMore}
+        hasMore={state.config.hasMore}
         scrollThreshold={0.8}
       >
-        <CardList from={animals} />
+        <CardList from={state.config.animals} />
       </InfiniteScroll>
     </AnimalListView>
   )
