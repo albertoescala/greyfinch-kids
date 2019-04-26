@@ -1,7 +1,15 @@
 ChooseName Vertical
-  maxWidth 400
   marginLeft auto
   marginRight auto
+  maxWidth 400
   textAlign center
   Nickname Text
     text Choose A Nickname
+  Card
+  TextCapture
+    onChange <onChangeNickname
+    value <nickname
+  NumberCapture
+    onChange <onChangeAge
+    value <age
+  Button

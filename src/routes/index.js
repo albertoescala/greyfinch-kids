@@ -12,35 +12,45 @@ export default [
     path: '/',
     component: Welcome,
     exact: true,
-    key: 'welcome',
-    requireAuth: false
+    state: {
+      isWelcome: true,
+    },
+    requireAuth: false,
   },
   {
     path: '/choose-name',
     component: WaitingComponent(ChooseName),
     exact: true,
-    key: 'choose-name',
-    requireAuth: false
+    state: {
+      isChooseName: true,
+    },
+    requireAuth: false,
   },
   {
     path: '/choose-animal',
     component: WaitingComponent(ChooseAnimal),
     exact: true,
-    key: 'choose-animal',
-    requireAuth: false
+    state: {
+      isChooseAnimal: true,
+    },
+    requireAuth: false,
   },
   {
     path: '/animal-list/:name',
     component: WaitingComponent(AnimalList),
     exact: true,
-    key: 'animal-list',
-    requireAuth: false
+    state: {
+      isAnimalList: true,
+    },
+    requireAuth: false,
   },
   {
     path: '/users',
     component: WaitingComponent(UserList),
     exact: true,
-    key: 'animal-list',
-    requireAuth: false
-  }
+    state: {
+      isUsersList: true,
+    },
+    requireAuth: false,
+  },
 ]

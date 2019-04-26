@@ -1,0 +1,21 @@
+App Vertical
+  Welcome
+  onWhen <isWelcome
+    history <
+    match <
+  ChooseName
+  onWhen <isChooseName
+    history <
+    match <
+  ChooseAnimal
+  onWhen <isChooseAnimal
+    history <
+    match <
+  AnimalList
+  onWhen <isAnimalList
+    history <
+    match <
+  UserList
+  onWhen <isUsersList
+    history <
+    match <

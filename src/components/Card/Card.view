@@ -12,5 +12,5 @@ Card Vertical
   overflowY hidden
   onClick <
   Avatar Image
-    source <avatar
+    source <avatar https://media3.giphy.com/media/g0QgX6dfuwiMWzalUz/200.gif
     maxWidth 400
