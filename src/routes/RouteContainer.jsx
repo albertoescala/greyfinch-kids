@@ -1,3 +1,4 @@
+import App from '../Main/App.view.js'
 import React from "react"
 import { Route } from "react-router-dom"
 
@@ -6,7 +7,7 @@ const RouteContainer = ({ component: Component, ...rest }) => (
     {...rest}
     render={props => {
       return (
-        <Component {...props} />
+        <App {...props} {...rest.state} />
       )
     }}
   />

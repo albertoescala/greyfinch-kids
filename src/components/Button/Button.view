@@ -1,20 +1,23 @@
 Button Horizontal
-  borderWidth 1
+  backgroundColor #00b5ff
+  borderBottomLeftRadius 4
+  borderBottomRightRadius 4
+  borderColor rgba(29, 33, 130, 1)
   borderStyle solid
-  borderColor #000
-  borderTopLeftRadius 10
-  borderTopRightRadius 10
-  borderBottomLeftRadius 10
-  borderBottomRightRadius 10
-  paddingTop 10
+  borderTopLeftRadius 4
+  borderTopRightRadius 4
+  borderWidth 1
+  cursor pointer
+  disabled <
+  justifyContent center
+  onClick <
   paddingBottom 10
   paddingLeft 10
   paddingRight 10
-  cursor pointer
-  justifyContent center
-  onClick <
-  disabled <
-  type <
+  paddingTop 10
+  type < text
   Label Text
-    fontSize 18
-    text <text Lorem
+    fontFamily Montserrat
+    fontSize 14
+    fontWeight 300
+    text < Lorem
